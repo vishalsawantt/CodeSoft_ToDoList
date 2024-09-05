@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Welcome TextView -->
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Information Layout -->
+    <RelativeLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/textViewWelcome"
+        android:layout_marginEnd="16dp">
+
+        <!-- Task Count TextView -->
+        <TextView
+            android:id="@+id/textViewTaskCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Tasks: 0"
+            android:background="@drawable/rounded_edittext"
+            android:padding="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_alignParentStart="true"/>
+
+        <!-- Important Count TextView -->
+        <TextView
+            android:id="@+id/textViewImportantCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Important: 0"
+            android:background="@drawable/rounded_edittext"
+            android:padding="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/textViewTaskCount"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- Important Icon -->
+        <ImageView
+            android:id="@+id/imageViewImportant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_info"
+            android:contentDescription="Important Icon"/>
+    </RelativeLayout>
+
+    <!-- Date and Time TextView -->
+    <TextView
+        android:id="@+id/textViewDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/infoLayout"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"/>
+
+    <!-- RecyclerView for Tasks -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rechomescreen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/textViewDateTime"
+        android:layout_above="@id/btnaddtask"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <!-- Floating Action Button to Add Task -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnaddtask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Task"
+        android:src="@android:drawable/ic_input_add"/>
+
+    <!-- Congratulations Layout -->
+    <RelativeLayout
+        android:id="@+id/congratulationsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone">
+
+        <!-- Congratulations TextView -->
+        <TextView
+            android:id="@+id/textViewCongratulations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Congratulations! All tasks completed."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <!-- Remove All Tasks Button -->
+        <Button
+            android:id="@+id/buttonRemoveAllTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove All Tasks"
+            android:layout_below="@id/textViewCongratulations"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"/>
+    </RelativeLayout>
+
+</RelativeLayout>

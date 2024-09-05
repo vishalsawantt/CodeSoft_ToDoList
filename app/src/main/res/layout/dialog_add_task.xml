@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:ignore="NewApi">
+
+    <EditText
+        android:id="@+id/edtaddtask"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_edittext"
+        android:paddingStart="16dp"
+        android:hint="Task Title"/>
+
+    <EditText
+        android:id="@+id/edtdes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_edittext"
+        android:paddingStart="16dp"
+        android:hint="Task Description"/>
+
+    <EditText
+        android:id="@+id/timeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Select Time"
+        android:focusable="false"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:background="@drawable/rounded_edittext"
+        android:paddingStart="16dp"
+        android:drawableEnd="@android:drawable/ic_menu_today"/>
+
+</LinearLayout>
