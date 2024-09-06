@@ -14,6 +14,12 @@ to manage their daily tasks efficiently with features to add, edit, delete, and 
 - **Important Tasks Indicator**: Tracks and displays the number of important tasks separately.
 - **Persistent Data Storage**: Saves tasks using `SharedPreferences` to retain data even after closing the app.
 
+
+## Download
+
+  [app-release [MConverter.eu].zip](https://github.com/user-attachments/files/16906664/app-release.MConverter.eu.zip)
+
+
 ## Screenshots
 
 1. **Splach_Screen**, **Main_Activity**, and **Add_task**  
